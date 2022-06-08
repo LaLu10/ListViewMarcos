@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Languages">
+        <item>PHP</item>
+        <item>Pearl</item>
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>C++</item>
+        <item>Haskell</item>
+        <item>Phyton</item>
+        <item>Pascal</item>
+        <item>.NET</item>
+    </string-array>
+</resources>
