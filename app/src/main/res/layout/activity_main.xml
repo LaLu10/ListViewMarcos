@@ -7,14 +7,74 @@
     android:background="#006064"
     tools:context=".MainActivity">
 
-    <ListView
-        android:id="@+id/listViewTest"
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ListView
+            android:id="@+id/ListView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@color/teal_200" />
+
+        <ListView
+            android:id="@+id/ListView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@color/purple_200" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="?android:attr/colorFocusedHighlight"
+        android:backgroundTintMode="add"
+        android:contentDescription="@string/app_name"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.73" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:backgroundTint="#FFAB00"
+        android:backgroundTintMode="add"
+        android:contentDescription="@string/app_name"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58000004" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="156dp"
+        android:text="Test"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
