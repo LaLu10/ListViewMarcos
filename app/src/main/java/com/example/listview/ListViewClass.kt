@@ -9,20 +9,22 @@ import android.widget.Toast
 
 
 class ListViewClass {
-    private lateinit var myListView: ListView
     private lateinit var selectedOption:Array<String>
-    private var myAdaptador: ArrayAdapter<*>
+    private lateinit var myAdaptador: ArrayAdapter<*>
+    private var myListView: ListView
 
-    constructor(myContext:Context, listV:ListView, valores: Array<String>){
+    private constructor(listV:ListView){
         myListView = listV
-        myAdaptador = ArrayAdapter(myContext,
+    }
+
+    constructor(listV:ListView, valores: Array<String>):this(listV){
+        myAdaptador = ArrayAdapter(listV.context,
             android.R.layout.simple_list_item_activated_1, valores)
         setClick()
     }
 
-    constructor(myContext:Context, listV:ListView, valores: Int){
-        myListView = listV
-        myAdaptador = ArrayAdapter.createFromResource(myContext, valores,
+    constructor(listV:ListView, valores: Int):this(listV){
+        myAdaptador = ArrayAdapter.createFromResource(listV.context, valores,
             android.R.layout.simple_list_item_activated_1)
         setClick()
     }

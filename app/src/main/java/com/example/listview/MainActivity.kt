@@ -25,11 +25,11 @@ class MainActivity : AppCompatActivity() {
 //        val myAdaptador2 = ArrayAdapter.createFromResource(this,
 //            R.array.Languages, android.R.layout.)
 
-        ClassSpinner(this,b.spinner2, opSeleccionada, R.array.Languages)
-        ClassSpinner(this,b.spinner4, opSeleccionada, valores)
-
-        ListViewClass(this,b.ListView1, valores)
-        ListViewClass(this,b.ListView2, R.array.Languages)
+        ClassSpinner(b.spinner2, opSeleccionada, R.array.Languages)
+        ClassSpinner(b.spinner4, opSeleccionada, valores)
+        
+        ListViewClass(b.ListView1, valores)
+        ListViewClass(b.ListView2, R.array.Languages)
     }
 
 }

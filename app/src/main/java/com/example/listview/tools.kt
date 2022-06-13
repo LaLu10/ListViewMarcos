@@ -22,8 +22,8 @@ import android.widget.Toast
  * @param idValores es el id (Int) del recurso donde se almacenan los valores del objeto.
  * Por ejemplo: R.array.valores
  * */
-fun getSpinnerR(myContext: Context, mySpinner: Spinner, opSelect:Array<String>, data: Int){
-    val adaptador: ArrayAdapter<*> = ArrayAdapter.createFromResource(myContext, data,
+fun getSpinnerR(mySpinner: Spinner, opSelect:Array<String>, data: Int){
+    val adaptador: ArrayAdapter<*> = ArrayAdapter.createFromResource(mySpinner.context, data,
         android.R.layout.simple_spinner_item)
     mySpinner.adapter = adaptador
     mySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
@@ -41,8 +41,8 @@ fun getSpinnerR(myContext: Context, mySpinner: Spinner, opSelect:Array<String>, 
         }
     }
 }
-fun getSpinnerA(myContext: Context, mySpinner: Spinner, opSelect:Array<String>, data: Array<String>){
-    val adaptador: ArrayAdapter<*> = ArrayAdapter(myContext,
+fun getSpinnerA(mySpinner: Spinner, opSelect:Array<String>, data: Array<String>){
+    val adaptador: ArrayAdapter<*> = ArrayAdapter(mySpinner.context,
         android.R.layout.simple_spinner_item, data)
     mySpinner.adapter = adaptador
     mySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{

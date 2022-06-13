@@ -11,18 +11,18 @@ class ClassSpinner {
     private lateinit var selectedOption:Array<String>
     private lateinit var adaptador:ArrayAdapter<*>
 
-    constructor(myContext: Context, mySpinner: Spinner, opSelect:Array<String>, data: Int){
+    constructor(mySpinner: Spinner, opSelect:Array<String>, data: Int){
         spinner = mySpinner
         selectedOption = opSelect
         adaptador = ArrayAdapter.createFromResource(
-            myContext, data, android.R.layout.simple_spinner_item )
+            mySpinner.context, data, android.R.layout.simple_spinner_item )
         setClick()
     }
 
-    constructor(myContext: Context, mySpinner: Spinner, opSelect:Array<String>, data: Array<String>){
+    constructor(mySpinner: Spinner, opSelect:Array<String>, data: Array<String>){
         spinner = mySpinner
         selectedOption = opSelect
-        adaptador = ArrayAdapter(myContext, android.R.layout.simple_spinner_item, data )
+        adaptador = ArrayAdapter(mySpinner.context, android.R.layout.simple_spinner_item, data )
         setClick()
     }
 
